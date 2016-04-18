@@ -1,0 +1,48 @@
+<?xml version='1.0' encoding='utf-8'?>
+<plugin id="au-com-spatialvision-plugins-indooratlas" version="0.0.1" xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android">
+    <name>sv-plugin-indooratlas</name>
+
+	<engines>
+		<engine name="cordova-android" version=">=4.0.0" /> <!-- This main branch of OneSignal depends on gradle and maven. -->
+		<engine name="apple-xcode" version=">=6.2.0" />
+		<engine name="apple-ios" version=">=6.0.0" />
+	</engines>
+
+	<js-module src="www/NavPosition.js" name="NavPosition">
+		<clobbers target="NavPosition" />
+	</js-module>
+
+	<js-module src="www/indooratlas.js" name="indooratlas">
+		<clobbers target="navigator.indooratlas" />
+	</js-module>
+
+
+	<platform name="android">
+		<framework src="platforms/android/build.gradle" custom="true" type="gradleReference"/>
+		<framework src="platforms/android/indooratlas.gradle" custom="true" type="gradleReference"/>
+
+		<framework src="com.indooratlas.android:indooratlas-android-sdk:2.0.2-beta@aar" />
+
+		<config-file target="config.xml" parent="/*">
+			<feature name="ModusEcho">
+				<param name="android-package"
+					value="com.moduscreate.plugin.ModusEcho"/>
+			</feature>
+		</config-file>
+		<source-file src="platforms/android/src/au/com/spatialvision/cordova/indooratlas/IndoorAtlasListener.java"
+			target-dir="src/au/com/spatialvision/cordova/indooratlas" />
+	</platform>
+
+
+	<!-- browser -->
+	<platform name="browser">
+		<js-module src="platforms/browser/IndoorAtlasProxy.js" name="IndoorAtlasProxy">
+			<runs/>
+		</js-module>
+
+		<js-module src="platforms/browser/indooratlas.js" name="indooratlas">
+			<merges target="navigator.indooratlas" />
+		</js-module>
+	</platform>
+
+</plugin>
