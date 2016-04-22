@@ -12,8 +12,8 @@
 		<clobbers target="NavPosition" />
 	</js-module>
 
-	<js-module src="www/indooratlas.js" name="indooratlas">
-		<clobbers target="navigator.indooratlas" />
+	<js-module src="www/IndoorAtlas.js" name="IndoorAtlas">
+		<clobbers target="indooratlas" />
 	</js-module>
 
 
@@ -21,16 +21,16 @@
 		<framework src="platforms/android/build.gradle" custom="true" type="gradleReference"/>
 		<framework src="platforms/android/indooratlas.gradle" custom="true" type="gradleReference"/>
 
-		<framework src="com.indooratlas.android:indooratlas-android-sdk:2.0.2-beta@aar" />
+		<!-- framework src="com.indooratlas.android:indooratlas-android-sdk:2.0.2-beta@aar" / -->
 
 		<config-file target="config.xml" parent="/*">
-			<feature name="ModusEcho">
+			<feature name="IndoorAtlas">
 				<param name="android-package"
-					value="com.moduscreate.plugin.ModusEcho"/>
+					value="au.com.spatialvision.plugin.IndoorAtlas"/>
 			</feature>
 		</config-file>
-		<source-file src="platforms/android/src/au/com/spatialvision/cordova/indooratlas/IndoorAtlasListener.java"
-			target-dir="src/au/com/spatialvision/cordova/indooratlas" />
+		<source-file src="platforms/android/src/au/com/spatialvision/plugin/IndoorAtlas.java"
+			target-dir="src/au/com/spatialvision/plugin" />
 	</platform>
 
 
