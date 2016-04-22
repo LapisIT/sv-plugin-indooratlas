@@ -1,0 +1,41 @@
+{
+  "name": "sv-plugin-indooratlas",
+  "version": "1.0.0",
+  "description": "",
+  "cordova": {
+    "id": "au-com-spatialvision-plugins-indooratlas",
+    "platforms": [
+      "android",
+      "browser"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/SpatialVision/sv-plugin-indooratlas.git"
+  },
+  "keywords": [
+    "ecosystem:cordova",
+    "cordova-android",
+    "cordova-browser"
+  ],
+  "engines": [
+    {
+      "name": "cordova-android",
+      "version": ">=4.0.0"
+    },
+    {
+      "name": "apple-xcode",
+      "version": ">=6.2.0"
+    },
+    {
+      "name": "apple-ios",
+      "version": ">=6.0.0"
+    }
+  ],
+  "author": "Hiroki Gota",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/SpatialVision/sv-plugin-indooratlas/issues"
+  },
+  "homepage": "https://github.com/SpatialVision/sv-plugin-indooratlas#readme"
+}
