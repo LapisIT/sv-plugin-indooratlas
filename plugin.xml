@@ -1,19 +1,19 @@
-<?xml version='1.0' encoding='utf-8'?>
-<plugin id="au-com-spatialvision-plugins-indooratlas" version="0.0.1" xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android">
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android" id="au-com-spatialvision-plugins-indooratlas" version="1.0.1">
     <name>sv-plugin-indooratlas</name>
 
 	<engines>
-		<engine name="cordova-android" version=">=4.0.0" /> <!-- This main branch of OneSignal depends on gradle and maven. -->
-		<engine name="apple-xcode" version=">=6.2.0" />
-		<engine name="apple-ios" version=">=6.0.0" />
+		<engine name="cordova-android" version="&gt;=4.0.0"/> <!-- This main branch of OneSignal depends on gradle and maven. -->
+		<engine name="apple-xcode" version="&gt;=6.2.0"/>
+		<engine name="apple-ios" version="&gt;=6.0.0"/>
 	</engines>
 
 	<js-module src="www/NavPosition.js" name="NavPosition">
-		<clobbers target="NavPosition" />
+		<clobbers target="NavPosition"/>
 	</js-module>
 
 	<js-module src="www/IndoorAtlas.js" name="IndoorAtlas">
-		<clobbers target="indooratlas" />
+		<clobbers target="indooratlas"/>
 	</js-module>
 
 
@@ -25,12 +25,10 @@
 
 		<config-file target="config.xml" parent="/*">
 			<feature name="IndoorAtlas">
-				<param name="android-package"
-					value="au.com.spatialvision.plugin.IndoorAtlas"/>
+				<param name="android-package" value="au.com.spatialvision.plugin.IndoorAtlas"/>
 			</feature>
 		</config-file>
-		<source-file src="platforms/android/src/au/com/spatialvision/plugin/IndoorAtlas.java"
-			target-dir="src/au/com/spatialvision/plugin" />
+		<source-file src="platforms/android/src/au/com/spatialvision/plugin/IndoorAtlas.java" target-dir="src/au/com/spatialvision/plugin"/>
 	</platform>
 
 
@@ -41,7 +39,7 @@
 		</js-module>
 
 		<js-module src="platforms/browser/indooratlas.js" name="indooratlas">
-			<merges target="navigator.indooratlas" />
+			<merges target="navigator.indooratlas"/>
 		</js-module>
 	</platform>
 
