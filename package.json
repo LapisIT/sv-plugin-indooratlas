@@ -37,5 +37,14 @@
   "bugs": {
     "url": "https://github.com/SpatialVision/sv-plugin-indooratlas/issues"
   },
-  "homepage": "https://github.com/SpatialVision/sv-plugin-indooratlas#readme"
+  "homepage": "https://github.com/SpatialVision/sv-plugin-indooratlas#readme",
+  "dependencies": {
+    "gulp-xml-editor": "^2.2.1",
+    "mversion": "^1.10.1"
+  },
+  "scripts": {
+    "uv": "npm version patch && node update-version.js && npm run commit",
+    "commit": "git add . && git commit -m 'patch version'",
+    "cuv": "npm run commit && npm version patch && node update-version.js && npm run commit"
+  }
 }
